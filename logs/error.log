@@ -1,0 +1,62 @@
+{
+  service: 'order-tracker-backend',
+  name: 'SequelizeHostNotFoundError',
+  parent: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  original: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  level: 'error',
+  message: 'Sync failed for user c8800e5d-de5c-4cbc-94ff-1a555889575a: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com',
+  stack: 'SequelizeHostNotFoundError: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com\n' +
+    '    at Client._connectionCallback (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:136:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:346:19)\n' +
+    '    at Connection.emit (node:events:517:28)\n' +
+    '    at Socket.reportStreamError (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:517:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:151:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  timestamp: '2025-09-24 14:34:08'
+}
+{
+  service: 'order-tracker-backend',
+  name: 'SequelizeHostNotFoundError',
+  parent: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  original: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  level: 'error',
+  message: 'Sync trigger error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com',
+  stack: 'SequelizeHostNotFoundError: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com\n' +
+    '    at Client._connectionCallback (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:136:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:346:19)\n' +
+    '    at Connection.emit (node:events:517:28)\n' +
+    '    at Socket.reportStreamError (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:517:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:151:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  timestamp: '2025-09-24 14:34:08'
+}

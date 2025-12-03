@@ -1,0 +1,56 @@
+{
+    "family": "",
+    "containerDefinitions": [
+        {
+            "name": "",
+            "image": "",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 0,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {"name": "PORT", "value": "3000"},
+                {"name": "NODE_ENV", "value": "development"},
+                {"name": "FRONTEND_URL", "value": "exp://192.168.0.133:8081/--/auth-success"},
+                {"name": "DB_HOST", "value": "orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com"},
+                {"name": "DB_PORT", "value": "5432"},
+                {"name": "DB_NAME", "value": "order_tracker_dev"},
+                {"name": "DB_USER", "value": "postgres"},
+                {"name": "DB_PASSWORD", "value": "XaiwRuUHuHDw"},
+                {"name": "DB_SSL", "value": "false"},
+                {"name": "JWT_SECRET", "value": "your-super-secret-jwt-key-change-this-in-production"},
+                {"name": "JWT_EXPIRES_IN", "value": "7d"},
+                {"name": "GOOGLE_CLIENT_ID", "value": "178164356079-tosunhc6qdre5v0c9ojetar56l20mbgf.apps.googleusercontent.com"},
+                {"name": "GOOGLE_CLIENT_SECRET", "value": "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"},
+                {"name": "GOOGLE_CALLBACK_URL", "value": "https://f3c4e5be1d78.ngrok-free.app/auth/google/callback"},
+                {"name": "LOG_LEVEL", "value": "info"},
+                {"name": "EMAIL_FETCH_DAYS", "value": "7"},
+                {"name": "ENABLE_CORS", "value": "true"},
+                {"name": "ENABLE_MORGAN_LOGGING", "value": "true"}
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::387793809447:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}

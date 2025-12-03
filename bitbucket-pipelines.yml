@@ -1,0 +1,243 @@
+pipelines:
+  branches:
+    dev:
+    - step:
+        name: Build and Deploy to ECS Fargate
+        image: docker:24.0.2
+        services:
+          - docker
+        size: 2x
+        caches:
+          - docker
+        script:
+          # Install required tools
+          - apk add --no-cache python3 py3-pip jq
+          - pip3 install awscli
+
+          # Configure AWS CLI for authentication and region
+          - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          - aws configure set region us-east-1
+
+          # Login to ECR
+          - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+
+          # Verify ECR registry accessibility and repository existence
+          - |
+            aws ecr describe-repositories --registry-id ${ECR_REGISTRY%%.*} >/dev/null 2>&1
+            if [ $? -ne 0 ]; then
+              echo "ECR registry $ECR_REGISTRY is not reachable or does not exist."
+              exit 1
+            fi
+
+            aws ecr describe-repositories --repository-names $ECR_REPOSITORY >/dev/null 2>&1
+            if [ $? -ne 0 ]; then
+              echo "ECR repository $ECR_REPOSITORY does not exist. Creating..."
+              aws ecr create-repository --repository-name $ECR_REPOSITORY
+              create_status=$?
+              if [ $create_status -ne 0 ]; then
+                echo "Failed to create ECR repository $ECR_REPOSITORY with exit code $create_status."
+                exit 1
+              else
+                echo "Repository $ECR_REPOSITORY created successfully."
+              fi
+            else
+              echo "ECR repository $ECR_REPOSITORY already exists."
+            fi
+
+          # Build and push Docker image to ECR
+          - export DOCKER_BUILDKIT=0
+          - docker build -t $ECR_REPOSITORY:latest .
+          - docker tag $ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          - docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+          # -------- ALB and Listener Setup --------
+          - |
+            # Fetch the default VPC ID in the region
+            DEFAULT_VPC_ID=$(aws ec2 describe-vpcs --filters Name=isDefault,Values=true --query 'Vpcs[0].VpcId' --output text)
+            echo "Default VPC ID: $DEFAULT_VPC_ID"
+
+            # Get Security Group ID by name
+            SECURITY_GROUP_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values="$SECURITY_GROUP_NAME" --query 'SecurityGroups[0].GroupId' --output text)
+            echo "Security Group ID: $SECURITY_GROUP_ID"
+
+            # Check if ALB with specified name exists
+            ALB_ARN=$(aws elbv2 describe-load-balancers --names "$ALB_NAME" --query 'LoadBalancers[0].LoadBalancerArn' --output text 2>/dev/null || echo "")
+            if [ -z "$ALB_ARN" ] || [ "$ALB_ARN" = "None" ]; then
+              # Create ALB if it does not exist
+              ALB_ARN=$(aws elbv2 create-load-balancer \
+                --name "$ALB_NAME" \
+                --subnets subnet-0d5b88ee6372b8969 subnet-0d7f5711fa56174d4 \
+       
+                   --security-groups $SECURITY_GROUP_ID \      --scheme internet-facing \
+                --type application \
+                --query 'LoadBalancers[0].LoadBalancerArn' --output text)
+              echo "Created ALB ARN: $ALB_ARN"
+            else
+              echo "ALB already exists: $ALB_ARN"
+            fi
+
+            HTTPS_LISTENER_ARN=""
+            if [ -n "$CERTIFICATE_ARN" ]; then
+              HTTPS_LISTENER_ARN=$(aws elbv2 describe-listeners --load-balancer-arn $ALB_ARN --query "Listeners[?Protocol=='HTTPS'].ListenerArn" --output text)
+              if [ -z "$HTTPS_LISTENER_ARN" ] || [ "$HTTPS_LISTENER_ARN" = "None" ]; then
+                HTTPS_LISTENER_ARN=$(aws elbv2 create-listener \
+                  --load-balancer-arn $ALB_ARN \
+                  --protocol HTTPS \
+                  --port 443 \
+                  --certificates CertificateArn=$CERTIFICATE_ARN \
+                  --default-actions Type=fixed-response,FixedResponseConfig={StatusCode=404,ContentType=text/plain,MessageBody='Not Found'} \
+                  --query 'Listeners[0].ListenerArn' --output text)
+                echo "Created HTTPS Listener ARN: $HTTPS_LISTENER_ARN"
+              else
+                echo "HTTPS Listener already exists: $HTTPS_LISTENER_ARN"
+              fi
+            else
+              echo "Certificate ARN not provided, skipping HTTPS listener creation."
+            fi
+
+            # Check for existing HTTP Listener on ALB
+            HTTP_LISTENER_ARN=$(aws elbv2 describe-listeners --load-balancer-arn $ALB_ARN --query "Listeners[?Protocol=='HTTP'].ListenerArn" --output text)
+            if [ -z "$HTTP_LISTENER_ARN" ] || [ "$HTTP_LISTENER_ARN" = "None" ]; then
+              # Create HTTP listener if missing, redirecting to HTTPS
+              HTTP_LISTENER_ARN=$(aws elbv2 create-listener \
+                --load-balancer-arn $ALB_ARN \
+                --protocol HTTP \
+                --port 80 \
+                --default-actions Type=redirect,RedirectConfig={Protocol=HTTPS,Port=443,StatusCode=HTTP_301} \
+                --query 'Listeners[0].ListenerArn' --output text)
+              echo "Created HTTP Listener ARN: $HTTP_LISTENER_ARN"
+            else
+              echo "HTTP Listener already exists: $HTTP_LISTENER_ARN"
+            fi
+
+            # Check if Target Group exists
+            TARGET_GROUP_ARN=$(aws elbv2 describe-target-groups --names "$TARGET_GROUP_NAME" --query 'TargetGroups[0].TargetGroupArn' --output text 2>/dev/null || echo "")
+            if [ -z "$TARGET_GROUP_ARN" ] || [ "$TARGET_GROUP_ARN" = "None" ]; then
+              # Create Target Group if missing
+              TARGET_GROUP_ARN=$(aws elbv2 create-target-group \
+                --name "$TARGET_GROUP_NAME" \
+                --protocol HTTP \
+                --port $CONTAINER_PORT \
+                --vpc-id $DEFAULT_VPC_ID \
+                --target-type ip \
+                --health-check-protocol HTTP \
+                --health-check-path "$health_check_path" \
+                --query 'TargetGroups[0].TargetGroupArn' --output text)
+              echo "Created Target Group ARN: $TARGET_GROUP_ARN"
+            else
+              echo "Target Group already exists: $TARGET_GROUP_ARN"
+            fi
+
+            # If HTTPS listener exists, configure default action and rules
+            if [ -n "$HTTPS_LISTENER_ARN" ]; then
+              echo "Starting HTTPS listener default action check..."
+              # Fetch default action info
+              DEFAULT_ACTION_INFO=$(aws elbv2 describe-listeners --listener-arn "$HTTPS_LISTENER_ARN" --query 'Listeners[0].DefaultActions[0].[Type,FixedResponseConfig.StatusCode]' --output text)
+              DEFAULT_ACTION_TYPE=$(echo "$DEFAULT_ACTION_INFO" | awk '{print $1}')
+              DEFAULT_ACTION_STATUS_CODE=$(echo "$DEFAULT_ACTION_INFO" | awk '{print $2}')
+
+              if [ "$DEFAULT_ACTION_TYPE" = "fixed-response" ] && [ "$DEFAULT_ACTION_STATUS_CODE" = "503" ]; then
+                echo "HTTPS Listener default action is already fixed-response 503. Skipping modification."
+              else
+                aws elbv2 modify-listener \
+                  --listener-arn "$HTTPS_LISTENER_ARN" \
+                  --default-actions Type=fixed-response,FixedResponseConfig={StatusCode=503,ContentType=text/plain,MessageBody='Service Unavailable'}
+                echo "Set HTTPS Listener default action to fixed 503 response"
+              fi
+              echo "Starting HTTPS listener rule management..."
+              # Listener rule management
+              echo "Fetching used priorities..."
+              USED_PRIORITIES=$(aws elbv2 describe-rules --listener-arn "$HTTPS_LISTENER_ARN" --query 'Rules[?Priority!=`"default"`].Priority' --output text | tr '\t' '\n')
+              echo "Used priorities: $USED_PRIORITIES"
+              echo "Fetching used host headers..."
+              USED_HOST_HEADERS=$(aws elbv2 describe-rules --listener-arn "$HTTPS_LISTENER_ARN" --query 'Rules[].Conditions[?Field==`host-header`].HostHeaderConfig.Values[]' --output text | tr '\t' '\n')
+              echo "Used host headers: $USED_HOST_HEADERS"
+              if echo "$USED_HOST_HEADERS" | grep -Fxq "$HOST_HEADER_VALUE"; then
+                echo "Listener rule for host header '$HOST_HEADER_VALUE' already exists. Skipping creation."
+              else
+                NEXT_PRIORITY=1
+                while echo "$USED_PRIORITIES" | grep -Fxq "$NEXT_PRIORITY"; do
+                  NEXT_PRIORITY=$((NEXT_PRIORITY + 1))
+                done
+                echo "Using next unused priority: $NEXT_PRIORITY"
+                aws elbv2 create-rule \
+                  --listener-arn "$HTTPS_LISTENER_ARN" \
+                  --priority "$NEXT_PRIORITY" \
+                  --conditions Field=host-header,HostHeaderConfig="{Values=[\"$HOST_HEADER_VALUE\"]}" \
+                  --actions Type=forward,TargetGroupArn="$TARGET_GROUP_ARN"
+                echo "Created HTTPS Listener rule with host-header '$HOST_HEADER_VALUE' and priority $NEXT_PRIORITY."
+              fi
+            fi
+          # -------- Log Group Setup --------
+          - |
+            LOG_GROUP_NAME="/ecs/$task_def_name"
+            aws logs describe-log-groups --log-group-name-prefix "$LOG_GROUP_NAME" --query "logGroups[?logGroupName=='$LOG_GROUP_NAME'].logGroupName" --output text | grep -w "$LOG_GROUP_NAME"
+            if [ $? -ne 0 ]; then
+              aws logs create-log-group --log-group-name "$LOG_GROUP_NAME" --tags key=ClientID,value=$ClientID key=REQID,value=$REQID
+              echo "Created CloudWatch Logs log group: $LOG_GROUP_NAME"
+            else
+              echo "CloudWatch Logs log group already exists: $LOG_GROUP_NAME"
+            fi 
+
+          # -------- ECS Task Definition Rendering --------
+          - |
+            IMAGE="$ECR_REGISTRY/$ECR_REPOSITORY:latest"
+            jq --arg task_def_name "$task_def_name" \
+               --arg image "$IMAGE" \
+               --arg container_port "$CONTAINER_PORT" \
+               --arg awslogs_group "/ecs/$task_def_name" \
+               '.family = $task_def_name
+                | .containerDefinitions[0].name = $task_def_name
+                | .containerDefinitions[0].image = $image
+                | .containerDefinitions[0].portMappings[0].containerPort = ($container_port | tonumber)
+                | .containerDefinitions[0].logConfiguration.options["awslogs-group"] = $awslogs_group' \
+               ecs-task-def.json > rendered-task-def.json
+
+          # -------- ECS Service and Deployment --------
+          - |
+            TASK_DEF_ARN=$(aws ecs register-task-definition \
+              --cli-input-json file://rendered-task-def.json \
+              --tags key=ClientID,value=$ClientID key=REQID,value=$ReqID \
+              --query 'taskDefinition.taskDefinitionArn' --output text)
+            echo "TASK_DEF_ARN=$TASK_DEF_ARN" >> task_def.env
+
+          - |
+            SERVICE_EXISTS=$(aws ecs describe-services \
+              --cluster $cluster_name \
+              --services $service_name \
+              --query 'services[0].status' \
+              --output text 2>/dev/null || echo "None")
+            echo "Service status: $SERVICE_EXISTS"
+            if [ "$SERVICE_EXISTS" = "ACTIVE" ]; then
+              echo "Service already exists."
+            elif [ "$SERVICE_EXISTS" = "None" ] || [ -z "$SERVICE_EXISTS" ]; then
+              source task_def.env
+              aws ecs create-service \
+                --cluster $cluster_name \
+                --service-name $service_name \
+                --task-definition "$TASK_DEF_ARN" \
+                --desired-count 1 \
+                --launch-type FARGATE \
+                --platform-version LATEST \
+                --network-configuration "awsvpcConfiguration={subnets=[subnet-0d5b88ee6372b8969,subnet-0d7f5711fa56174d4],securityGroups=[$SECURITY_GROUP_ID],assignPublicIp=ENABLED}" \
+                --load-balancers "targetGroupArn=$TARGET_GROUP_ARN,containerName=$task_def_name,containerPort=$CONTAINER_PORT" \
+                --tags key=ClientID,value=$ClientID key=REQID,value=$REQID
+
+            else
+              echo "Unexpected ECS service status: $SERVICE_EXISTS"
+              exit 1
+            fi
+
+          - |
+            source task_def.env
+            aws ecs update-service \
+              --cluster $cluster_name \
+              --service $service_name \
+              --task-definition "$TASK_DEF_ARN" \
+              --force-new-deployment
+
+definitions:
+  services:
+    docker:
+      memory: 3072

@@ -1,0 +1,1765 @@
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:44:46'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:44:46'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:44:46'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T08:20:50.340Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 13:50:50'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: c6bbd82d-a44d-4c6d-ba30-5d14391082b6',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:50:51'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:50:51'
+}
+{
+  message: 'Enhanced chronological sync completed: 2 created, 0 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:51:47'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:21:47 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:51:47'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:21:51 +0000] "GET /api/sync/status HTTP/1.1" 200 974 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:51:51'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 13:51:52'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 233,
+  ordersWithItems: 37,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 13:51:53'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:21:53 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:51:53'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T08:24:23.066Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 13:54:23'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: e14f15ea-8abe-4baf-a695-f3bb1288178e',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:54:23'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:54:23'
+}
+{
+  message: 'Enhanced chronological sync completed: 32 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:55:42'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:25:42 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:55:42'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:25:46 +0000] "GET /api/sync/status HTTP/1.1" 200 1004 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:55:46'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 13:55:47'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 292,
+  ordersWithItems: 34,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 13:55:49'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:25:49 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:55:49'
+}
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:56:15'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:56:15'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 13:56:15'
+}
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:01:20'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:01:20'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:01:20'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T08:31:29.219Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:01:29'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: bc933d9f-8790-4d05-acf0-b32df48d342f',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:01:29'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:01:29'
+}
+{
+  message: 'Enhanced chronological sync completed: 34 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:02:48'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:32:48 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:02:48'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:32:52 +0000] "GET /api/sync/status HTTP/1.1" 200 1004 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:02:52'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:02:53'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 292,
+  ordersWithItems: 34,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:02:54'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:32:54 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:02:54'
+}
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:35'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:35'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:35'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:07:49'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 0,
+  ordersWithItems: 0,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:07:50'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:37:50 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 231 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:50'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T08:37:58.601Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:07:58'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: 2891e349-2db0-40c5-9e01-aaa05bbc82fa',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:59'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:07:59'
+}
+{
+  message: 'Enhanced chronological sync completed: 34 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:09:15'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:39:15 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:09:15'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:39:19 +0000] "GET /api/sync/status HTTP/1.1" 200 1004 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:09:19'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:09:20'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:09:21'
+}
+{
+  message: '::1 - - [24/Sep/2025:08:39:21 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:09:21'
+}
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:24:38'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:24:38'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:24:38'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:02:19 +0000] "GET /auth/me HTTP/1.1" 200 534 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:32:19'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:32:20'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:32:22'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:02:22 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:32:22'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:02:22 +0000] "GET /api/sync/status HTTP/1.1" 200 1004 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:32:22'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T09:02:50.276Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:32:50'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: b7f14200-bd6d-42a6-bacd-b242c0392215',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:32:50'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:32:50'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:03:39 +0000] "POST /api/sync/trigger HTTP/1.1" - - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:33:39'
+}
+{
+  service: 'order-tracker-backend',
+  name: 'SequelizeHostNotFoundError',
+  parent: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  original: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  level: 'error',
+  message: 'Sync failed for user c8800e5d-de5c-4cbc-94ff-1a555889575a: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com',
+  stack: 'SequelizeHostNotFoundError: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com\n' +
+    '    at Client._connectionCallback (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:136:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:346:19)\n' +
+    '    at Connection.emit (node:events:517:28)\n' +
+    '    at Socket.reportStreamError (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:517:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:151:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  timestamp: '2025-09-24 14:34:08'
+}
+{
+  service: 'order-tracker-backend',
+  name: 'SequelizeHostNotFoundError',
+  parent: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  original: Error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com'
+  },
+  level: 'error',
+  message: 'Sync trigger error: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com',
+  stack: 'SequelizeHostNotFoundError: getaddrinfo ENOTFOUND orderhub-dev-postgres-db01.cmryq4686eqr.us-east-1.rds.amazonaws.com\n' +
+    '    at Client._connectionCallback (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:136:24)\n' +
+    '    at Client._handleErrorWhileConnecting (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:336:19)\n' +
+    '    at Client._handleErrorEvent (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\client.js:346:19)\n' +
+    '    at Connection.emit (node:events:517:28)\n' +
+    '    at Socket.reportStreamError (C:\\Users\\User\\Documents\\GIT_REPOS\\orderhub\\orderhub-backend-api\\node_modules\\pg\\lib\\connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:517:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:151:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  timestamp: '2025-09-24 14:34:08'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:14 +0000] "GET /auth/google?state=mobile&redirect_url=exp%3A%2F%2F192.168.0.133%3A8081%2F--%2Fauth-success HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:14'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Google OAuth callback for user: 101751320543035851683',
+  timestamp: '2025-09-24 14:42:17'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Existing user updated: rakeshsingh.singh405@gmail.com',
+  timestamp: '2025-09-24 14:42:20'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:20 +0000] "GET /auth/google/callback?state=%7B%22redirect_url%22%3A%22exp%3A%2F%2F192.168.0.133%3A8081%2F--%2Fauth-success%22%7D&code=4%2F0AVGzR1C-tNiY7R66ABBA_Pz0fL0JGc2Sj3nb6-16VDJJK00Ks7NaI5TvugMxvgc7rTLtDA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&authuser=0&prompt=none HTTP/1.1" 302 352 "https://accounts.google.com/" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:20'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:20 +0000] "GET /auth/me HTTP/1.1" 200 534 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:20'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:21 +0000] "GET /auth/me HTTP/1.1" 200 534 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:21'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:42:22'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 41,
+  ordersWithItems: 6,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:42:22'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:22 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:22'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:23 +0000] "GET /api/sync/status HTTP/1.1" 200 676 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:23'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 14:42:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 14:42:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 14:42:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 14:42:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 5,
+  overallScore: 100,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 14:42:41'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 14:42:42'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 5,
+  ordersWithAmounts: 5,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 14:42:43'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 5,
+  timeRange: '30days',
+  dataQualityScore: 100,
+  ordersWithAmounts: 5,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 14:42:43'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:43 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:43'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:56 +0000] "POST /auth/disconnect HTTP/1.1" 200 48 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:56'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:57 +0000] "POST /auth/logout HTTP/1.1" 200 54 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:57'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:59 +0000] "GET /api/sync/status HTTP/1.1" 200 676 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:59'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:12:59 +0000] "GET /auth/google?state=mobile&redirect_url=exp%3A%2F%2F192.168.0.133%3A8081%2F--%2Fauth-success HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:42:59'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Google OAuth callback for user: 101751320543035851683',
+  timestamp: '2025-09-24 14:43:09'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Existing user updated: rakeshsingh.singh405@gmail.com',
+  timestamp: '2025-09-24 14:43:09'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:13:09 +0000] "GET /auth/google/callback?state=%7B%22redirect_url%22:%22exp://192.168.0.133:8081/--/auth-success%22%7D&code=4/0AVGzR1BS2yuLADglwGim9ncI_r2LqTDdAhsUdkDyp7cE7Z0O6Mqd-Z2h0fQ3KQ-GJH1HGw&scope=email%20profile%20https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email%20openid&authuser=0&prompt=consent HTTP/1.1" 302 352 "https://accounts.google.com/" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:43:09'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:13:10 +0000] "GET /auth/me HTTP/1.1" 200 534 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:43:10'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:13:12 +0000] "GET /api/sync/status HTTP/1.1" 200 676 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:43:12'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T09:13:15.867Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:43:15'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: 98b5737a-33fb-4e76-9d17-a8b4c67b277e',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:43:16'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:43:16'
+}
+{
+  message: 'Enhanced chronological sync completed: 28 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:44:52'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:14:52 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:44:52'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:14:56 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:44:56'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:44:57'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:44:58'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:14:58 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:44:58'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 14:45:15'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 14:45:15'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 14:45:15'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 14:45:15'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  overallScore: 99.24242424242425,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 14:45:16'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 14:45:17'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 33,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 14:45:20'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  timeRange: '30days',
+  dataQualityScore: 99.24242424242425,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 14:45:20'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:15:20 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:45:20'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T09:18:53.263Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:48:53'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: 1d6e1d37-26ea-41d8-890d-e79e095ce048',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:48:53'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:48:53'
+}
+{
+  message: 'Enhanced chronological sync completed: 34 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:50:10'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:20:10 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:50:10'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:20:14 +0000] "GET /api/sync/status HTTP/1.1" 200 1004 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:50:14'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:50:15'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:50:16'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:20:16 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:50:16'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 14:52:56'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 14:52:56'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 14:52:56'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 14:52:56'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  overallScore: 99.24242424242425,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 14:52:57'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 14:52:58'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 33,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 14:53:01'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  timeRange: '30days',
+  dataQualityScore: 99.24242424242425,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 14:53:01'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:23:01 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:53:01'
+}
+{
+  message: 'Database connection established successfully.',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:54:33'
+}
+{
+  message: 'Server running on port 3000',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:54:33'
+}
+{
+  message: 'Environment: development',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:54:33'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:26:57 +0000] "GET /auth/me HTTP/1.1" 304 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:56:57'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:56:58'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 0,
+  ordersWithItems: 0,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:56:59'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:26:59 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 231 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:56:59'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:27:00 +0000] "GET /api/sync/status HTTP/1.1" 200 1003 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:57:00'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T09:27:03.684Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 14:57:03'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: b1425fba-c65f-4f09-b388-034c038ffb1f',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:57:04'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:57:04'
+}
+{
+  message: 'Enhanced chronological sync completed: 34 created, 5 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:58:33'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:28:33 +0000] "POST /api/sync/trigger HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:58:33'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:28:37 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:58:37'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 14:58:38'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 14:58:39'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:28:39 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:58:39'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 14:58:41'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 14:58:41'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 14:58:41'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 14:58:41'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  overallScore: 99.24242424242425,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 14:58:42'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 14:58:43'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 33,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 14:58:44'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  timeRange: '30days',
+  dataQualityScore: 99.24242424242425,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 14:58:44'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:28:44 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:58:44'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '7days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 14:59:23'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '7days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 14:59:24'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '7days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 14:59:24'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '7days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 14:59:24'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 7,
+  overallScore: 96.42857142857143,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 14:59:25'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 14:59:26'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 7,
+  ordersWithAmounts: 7,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 14:59:27'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 7,
+  timeRange: '7days',
+  dataQualityScore: 96.42857142857143,
+  ordersWithAmounts: 7,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 14:59:27'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:29:27 +0000] "GET /api/analytics?timeRange=7days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 14:59:27'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:31:11 +0000] "GET /auth/me HTTP/1.1" 304 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:01:11'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 15:01:13'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 15:01:14'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:31:14 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:01:14'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:31:14 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:01:14'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 15:01:35'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 15:01:35'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 15:01:35'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 15:01:35'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  overallScore: 99.24242424242425,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 15:01:37'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 15:01:38'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 33,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 15:01:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  timeRange: '30days',
+  dataQualityScore: 99.24242424242425,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 15:01:40'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:31:40 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:01:40'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:32:50 +0000] "GET /auth/me HTTP/1.1" 304 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:02:50'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 15:02:51'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 15:02:53'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:32:53 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:02:53'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:32:53 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:02:53'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:24 +0000] "POST /auth/logout HTTP/1.1" 200 54 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:24'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:25 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:25'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:33 +0000] "GET /auth/google?state=mobile&redirect_url=exp%3A%2F%2F192.168.0.133%3A8081%2F--%2Fauth-success HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:33'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Google OAuth callback for user: 101751320543035851683',
+  timestamp: '2025-09-24 15:03:40'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'Auth',
+  level: 'info',
+  message: 'Existing user updated: rakeshsingh.singh405@gmail.com',
+  timestamp: '2025-09-24 15:03:42'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:42 +0000] "GET /auth/google/callback?state=%7B%22redirect_url%22%3A%22exp%3A%2F%2F192.168.0.133%3A8081%2F--%2Fauth-success%22%7D&code=4%2F0AVGzR1Cx1Iuu8ZdDV632ISovKD_rHwwngaceCsGiUemCUG06LmWnGv9YJCGspMGmr_08QA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&authuser=0&prompt=none HTTP/1.1" 302 352 "https://accounts.google.com/" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:42'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:43 +0000] "GET /auth/me HTTP/1.1" 200 534 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:43'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:33:45 +0000] "GET /api/sync/status HTTP/1.1" 200 1005 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:03:45'
+}
+{
+  service: 'order-tracker-backend',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  userEmail: 'rakeshsingh.singh405@gmail.com',
+  originalOptions: {
+    daysToFetch: 30,
+    maxResults: 100,
+    platforms: [ 'amazon', 'flipkart', 'myntra', 'swiggy', 'blinkit' ]
+  },
+  finalOptions: { daysToFetch: 30, maxResults: 100 },
+  validation: {
+    daysSource: 'frontend_request',
+    maxResultsSource: 'frontend_request',
+    requestTimestamp: '2025-09-24T09:35:50.151Z',
+    userAgent: 'okhttp/4.12.0'
+  },
+  level: 'info',
+  message: 'Enhanced sync trigger',
+  timestamp: '2025-09-24 15:05:50'
+}
+{
+  message: 'Starting enhanced chronological sync for user rakeshsingh.singh405@gmail.com with sync ID: fe8e0d38-01ca-4ba0-bd0f-81bed46ec79f',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:05:50'
+}
+{
+  message: 'Gmail client initialized successfully',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:05:50'
+}
+{
+  message: 'Enhanced chronological sync completed: 0 created, 0 updated',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:06:55'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:36:55 +0000] "POST /api/sync/trigger HTTP/1.1" 200 833 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:06:55'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:36:59 +0000] "GET /api/sync/status HTTP/1.1" 200 948 "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:06:59'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  includeItems: true,
+  syncOnly: false,
+  level: 'info',
+  message: 'Fetching orders for user',
+  timestamp: '2025-09-24 15:07:00'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderRoutes',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  count: 148,
+  ordersWithItems: 33,
+  level: 'info',
+  message: 'Enhanced orders fetched successfully',
+  timestamp: '2025-09-24 15:07:01'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:37:01 +0000] "GET /api/orders?includeItems=true HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:07:01'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  email: 'rakeshsingh.singh405@gmail.com',
+  timeRange: '30days',
+  forceRefresh: false,
+  level: 'info',
+  message: 'Analytics request received',
+  timestamp: '2025-09-24 15:09:45'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  options: { onlyWithAmounts: false, includeItems: true },
+  level: 'info',
+  message: 'Fetching orders for analytics',
+  timestamp: '2025-09-24 15:09:45'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Calculating order analytics stats',
+  timestamp: '2025-09-24 15:09:45'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  timeRange: '30days',
+  level: 'info',
+  message: 'Testing analytics data quality',
+  timestamp: '2025-09-24 15:09:45'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  overallScore: 99.24242424242425,
+  level: 'info',
+  message: 'Analytics data quality assessment completed',
+  timestamp: '2025-09-24 15:09:46'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  error: 'function date_format(timestamp with time zone, unknown) does not exist',
+  level: 'warn',
+  message: 'DATE_FORMAT failed, using fallback method',
+  timestamp: '2025-09-24 15:09:47'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'OrderService',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  orderCount: 33,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics orders fetched successfully',
+  timestamp: '2025-09-24 15:09:49'
+}
+{
+  service: 'order-tracker-backend',
+  module: 'AnalyticsAPI',
+  userId: 'c8800e5d-de5c-4cbc-94ff-1a555889575a',
+  totalOrders: 33,
+  timeRange: '30days',
+  dataQualityScore: 99.24242424242425,
+  ordersWithAmounts: 33,
+  level: 'info',
+  message: 'Analytics data generated successfully',
+  timestamp: '2025-09-24 15:09:49'
+}
+{
+  message: '::1 - - [24/Sep/2025:09:39:49 +0000] "GET /api/analytics?timeRange=30days HTTP/1.1" 200 - "-" "okhttp/4.12.0"',
+  level: 'info',
+  service: 'order-tracker-backend',
+  timestamp: '2025-09-24 15:09:49'
+}
